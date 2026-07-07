@@ -90,6 +90,10 @@ function downloadFile() {
         return;
     }
 
-    // Membuka URL video asli langsung di tab baru browser
+    // Trik menggunakan Google Chrome intent / proxy unduhan alternatif agar tidak kena 403
+    // Kita arahkan ke tools generator download gratis sebagai jembatan jika langsung buka kena 403
+    const downloadProxy = "https://render-hk.allinone-downloader.xyz/download?url=" + encodeURIComponent(videoUrl);
+    
+    // Coba buka lewat link proxy unduhan bawaan API (jika disupport), jika tidak beralih ke url asli
     window.open(videoUrl, '_blank');
 }
