@@ -89,14 +89,3 @@ function downloadFile() {
         alert("Link video belum siap!");
         return;
     }
-
-    // Membuka URL video asli langsung di tab baru browser
-    window.open(videoUrl, '_blank');
-}
-.ads-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px auto;
-    width: 100%;
-    }
